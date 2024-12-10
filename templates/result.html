@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caption Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Generated Caption</h1>
+        <div class="result-container">
+            <img src="{{ url_for('static', filename=image_path) }}" alt="Uploaded Image">
+            <p class="caption">{{ caption }}</p>
+        </div>
+        <a href="{{ url_for('index') }}" class="back-button">Try Another Image</a>
+    </div>
+</body>
+</html>
